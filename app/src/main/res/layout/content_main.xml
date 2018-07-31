@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.uplus.mobilemoney.MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/side_nav_bar"
+    tools:showIn="@layout/app_bar_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Balance: 10000"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_gravity="right"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+
+
+    <EditText
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:hint="0.00"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:inputType="number"
+        android:focusable="false"
+        android:textColor="#ffffff"
+        android:background="@null"
+        android:maxLength="9"
+       android:layout_gravity="center"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/text"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="236dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/text"
+            android:hint="Send to number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="23dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/qrcode"
+            android:layout_height="23dp"
+
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="30dp"
+            app:srcCompat="@drawable/ic_account_circle_black_24dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:scaleType="fitEnd"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/text"
+        android:layout_height="wrap_content">
+
+
+    <Spinner
+        android:id="@+id/recipient"
+        android:layout_width="match_parent"
+       android:entries="@array/recipients"
+        android:inputType="phone"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="10dp"
+        android:background="@drawable/text"
+        android:layout_height="40dp"
+        android:layout_toLeftOf="@+id/down"
+        />
+        <ImageView
+            android:id="@+id/down"
+            android:layout_width="30dp"
+            app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"
+            android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            tools:ignore="VectorDrawableCompat" />
+    </RelativeLayout>
+    <com.fxn769.Numpad
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/num"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        app:numpad_background_resource="@color/transparent"
+        app:numpad_grid_background_color="@color/transparent"
+        app:numpad_grid_line_thickness="10dp"
+        app:numpad_grid_visible="true"
+        app:numpad_image_resource="@drawable/ic_backspace_black_24dp"
+        app:numpad_text_color="#fff"
+        app:numpad_text_limit="10"
+        app:numpad_text_size="15dp" />
+
+    <Button
+        android:id="@+id/send"
+        android:text="Confirm"
+        android:textColor="#fff"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="200dp"
+        android:layout_gravity="bottom|center"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

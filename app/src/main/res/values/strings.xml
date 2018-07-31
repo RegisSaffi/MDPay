@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">UV Pay</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="recipients">
+        <item>Me to you</item>
+        <item>Selling</item>
+    </string-array>
+    <string name="title_activity_transactions">Transactions</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="section_format">Transactions: %1$d</string>
+</resources>
